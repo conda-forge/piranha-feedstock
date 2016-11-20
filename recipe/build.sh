@@ -13,5 +13,12 @@ cmake \
     ..
 
 make
-ctest -E "gastineau"
+
+if [ "$(uname)" == "Darwin" ]
+then
+    ctest -E "gastineau|pearce2_unpacked|s11n_perf" -V;
+else
+    ctest -E "gastineau|pearce2_unpacked" -V;
+fi
+
 make install
