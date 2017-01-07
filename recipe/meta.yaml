@@ -19,13 +19,13 @@ requirements:
     - cmake
     - gmp
     - mpfr
-    - boost 1.62.*
+    - boost 1.63.*
     - bzip2 1.0.*
     - zlib 1.2.*
   run:
     - gmp
     - mpfr
-    - boost 1.62.*
+    - boost 1.63.*
     - bzip2 1.0.*
     - zlib 1.2.*
 
