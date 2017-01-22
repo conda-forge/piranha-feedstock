@@ -10,7 +10,7 @@ source:
   sha256: 649f91ceee56446f903551f0665b8807b833d91fd9622c412eadc95d353ac8e6
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
 
 requirements:
@@ -19,13 +19,13 @@ requirements:
     - cmake
     - gmp
     - mpfr
-    - boost 1.63.*
+    - boost-cpp 1.63.*
     - bzip2 1.0.*
     - zlib 1.2.*
   run:
     - gmp
     - mpfr
-    - boost 1.63.*
+    - boost-cpp 1.63.*
     - bzip2 1.0.*
     - zlib 1.2.*
 
