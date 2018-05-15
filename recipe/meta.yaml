@@ -1,4 +1,4 @@
-{% set version = "0.10" %}
+{% set version = "0.11" %}
 
 package:
   name: piranha
@@ -7,10 +7,10 @@ package:
 source:
   fn: piranha-{{ version }}.tar.gz
   url: https://github.com/bluescarni/piranha/archive/v{{ version }}.tar.gz
-  sha256: e2feefb7dac5e441688b2d849c1d89219243ce9a5daeb611b1d9fe952c86bd26
+  sha256: ab5782696a40888726c752c06a4b60783eda28ee4736b56083b96a53fd9a6230
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
 
 requirements:
