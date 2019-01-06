@@ -3,8 +3,14 @@
 mkdir build
 cd build
 
+# NOTE: there might be undefined references occurring
+# in the Boost.system library, depending on the C++ versions
+# used to compile Boost and/or the piranha examples. We
+# can avoid them by forcing the use of the header-only
+# version of the library.
+export CXXFLAGS="$CXXFLAGS -DBOOST_ERROR_CODE_HEADER_ONLY"
+
 cmake \
-    -DCMAKE_CXX_FLAGS="-DBOOST_ERROR_CODE_HEADER_ONLY" \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
