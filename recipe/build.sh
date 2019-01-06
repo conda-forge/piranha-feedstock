@@ -4,6 +4,7 @@ mkdir build
 cd build
 
 cmake \
+    -DCMAKE_CXX_FLAGS="-DBOOST_ERROR_CODE_HEADER_ONLY" \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
