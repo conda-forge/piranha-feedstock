@@ -17,8 +17,8 @@ cmake \
     -DPIRANHA_WITH_BZIP2=yes \
     -DPIRANHA_WITH_ZLIB=yes  \
     -DBUILD_TESTS=yes \
-    ..
-
+    -DBoost_NO_BOOST_CMAKE=ON \
+    ${SRC_DIR}
 make
 
 if [ "$(uname)" == "Darwin" ]
