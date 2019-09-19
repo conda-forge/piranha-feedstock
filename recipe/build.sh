@@ -10,6 +10,10 @@ cd build
 # version of the library.
 export CXXFLAGS="$CXXFLAGS -DBOOST_ERROR_CODE_HEADER_ONLY"
 
+if [[ "$(uname)" != "Darwin" ]]; then
+    LDFLAGS="-lrt ${LDFLAGS}"
+fi
+
 cmake \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
